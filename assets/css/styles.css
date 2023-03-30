@@ -1,0 +1,16 @@
+.success{
+    border-color: rgb(179, 230, 179);
+    border-width: medium;
+    background-color: rgb(219, 241, 239);
+}
+
+.failed{
+    border-color: rgb(207, 60, 60);
+    border-width: 1px;
+    background-color: rgb(245, 226, 226);
+}
+
+.margin{
+    margin-top: 5%;
+}
+

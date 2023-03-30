@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Inscription System</title>
+</head>
+<body>
+    <nav class="navbar bg-black fixed-top mb-5">
+        <div class="container">
+            <span class="navbar-brand text-white">
+                Inscription System
+            </span>
+        </div>
+    </nav>
+    <div id="main-container" class="container-fluid">
+        <div class="col-6 offset-3 margin">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" aria-current="page">Personal Information</li>
+                </ol>
+            </nav>
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="card-title text-center fst-italic">Personal Information</h1>
+                </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input id="name" type="text" placeholder="Type your name..." class="form-control">
+                                <small class="text-danger"></small>
+                            </div>
+
+                            <div class=" col-4 mb-3">
+                                <label for="province" class="form-label">Province</label>
+                                <input id="province" type="text" placeholder="Type your province..." class="form-control">
+                                <small class="text-danger"></small>
+                            </div>
+
+                            <div class=" col-4 mb-3">
+                                <label for="city" class="form-label">City</label>
+                                <input id="city" type="text" placeholder="Type your city..." class="form-control">
+                                <small class="text-danger"></small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class=" col-6 mb-3">
+                                <label for="sector" class="form-label">Sector</label>
+                                <input id="sector" type="text" placeholder="Type your sector..." class="form-control">
+                                 <small class="text-danger"></small>
+                            </div>
+
+                            <div class=" col-6 mb-3">
+                                <label for="street" class="form-label">Street</label>
+                                <input id="street" type="text" placeholder="Type your street..." class="form-control">
+                                <small class="text-danger"></small>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="career" class="form-label">Career</label>
+                            <select id="career" class="form-select">
+                                <option value="" selected>Select a career</option>
+                                <option value="Software Development">Software Development</option>
+                                <option value="Multimedia">Multimedia</option>
+                                <option value="Networks">Networks</option>
+                            </select>
+                            <small class="text-danger"></small>
+                        </div>
+                        <div class="float-end">
+                            <button id="reset" class="btn btn-outline-secondary">Reset</button>
+                            <button id="save" class="btn btn-outline-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          <!--   Software selection  -->
+             <!-- <div id="software-container" class="col-6 offset-3 mt-5 mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li id="btn-GoToForm" class="breadcrumb-item"><a href="#">Personal Information</a></li>
+                        <li id="btn-GoToSelection" class="breadcrumb-item" aria-current="page">Subject Selection</li>
+                        <li id="btn-GoToSummary" class="breadcrumb-item" aria-current="page">Summary Selection</li>
+                    </ol>
+                </nav>
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="card-title text-center fst-italic"> Software Subject Selection</h4>
+                    </div>
+                    <div class="card-body">
+                       <div class="accordion" id="software">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ProgOne" aria-expanded="true" aria-controls="ProgOne">
+                                Programming 1
+                            </button>
+                            </h2>
+                            <div id="ProgOne" class="accordion-collapse collapse show" data-bs-parent="#software">
+                            <div id="progOne-radio" class="accordion-body">
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label me-2">Ma 8:00 - 12:59</label>
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label me-2">Lu 17:00 - 21:59</label>
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label">Vi 14:00 - 17:59</label>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ProgTwo" aria-expanded="false" aria-controls="ProgTwo">
+                                Programming 2
+                            </button>
+                            </h2>
+                            <div id="ProgTwo" class="accordion-collapse collapse" data-bs-parent="#software">
+                            <div id="progTwo-radio" class="accordion-body">
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label me-2">Mi 17:00 - 21:59</label>
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label">Ju 14:00 - 17:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dbi" aria-expanded="false" aria-controls="dbi">
+                                Data Base Introduction
+                            </button>
+                            </h2>
+                            <div id="dbi" class="accordion-collapse collapse" data-bs-parent="#software">
+                            <div id="dbi-radio" class="accordion-body">
+                                <input class="form-check-input" name="dbi" type="radio">
+                                <label class="form-check-label me-2">Ju 8:00 - 10:00, Vi 9:00 - 11:00</label>
+                                <input class="form-check-input" name="dbi" type="radio">
+                                <label class="form-check-label me-2">Sa 17:00 - 21:59</label>
+                                <input class="form-check-input" name="dbi" type="radio">
+                                <label class="form-check-label">Ma 14:00 - 17:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dba" aria-expanded="false" aria-controls="dba">
+                                Data Base Advanced
+                            </button>
+                            </h2>
+                            <div id="dba" class="accordion-collapse collapse" data-bs-parent="#software">
+                            <div id="dba-radio" class="accordion-body">
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 10:00, Ju 9:00 - 11:00</label>
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label me-2">Lu 17:00 - 18:59, Mi 19:00 - 21:59</label>
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label">Ju 14:00 - 17:59</label>
+                            </div>
+                            </div>
+                        </div>
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mat" aria-expanded="false" aria-controls="mat">
+                                Integral Calculus
+                            </button>
+                            </h2>
+                            <div id="mat" class="accordion-collapse collapse" data-bs-parent="#software">
+                            <div id="mat-radio" class="accordion-body">
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 12:59</label>
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label">Mi 14:00 - 18:59</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                        <button class="btn btn-outline-success float-end mt-3">Print Selection</button>
+                        <button class="btn btn-outline-warning float-end mt-3 me-2">Back</button>
+                    </div>
+                </div>
+            </div>   -->
+     
+            <!--   Networks selection  -->
+            
+            <!--  <div class="col-6 offset-3 mt-5 mb-5">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="card-title text-center fst-italic">Networks Subject Selection</h4>
+                    </div>
+                    <div class="card-body">
+                       <div class="accordion" id="network">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#NetFund" aria-expanded="true" aria-controls="NetFund">
+                                Networks Fundamentals
+                            </button>
+                            </h2>
+                            <div id="NetFund" class="accordion-collapse collapse show" data-bs-parent="#network">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label me-2">Ma 8:00 - 12:59</label>
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label me-2">Lu 17:00 - 21:59</label>
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label">Vi 14:00 - 17:59</label>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#OperativeSys" aria-expanded="false" aria-controls="OperativeSys">
+                                Operative System
+                            </button>
+                            </h2>
+                            <div id="OperativeSys" class="accordion-collapse collapse" data-bs-parent="#network">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label me-2">Mi 17:00 - 21:59</label>
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label">Ju 14:00 - 17:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dif" aria-expanded="false" aria-controls="dif">
+                                Differential Calculus
+                            </button>
+                            </h2>
+                            <div id="dif" class="accordion-collapse collapse" data-bs-parent="#network">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="dif" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="dif" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 12:59</label>
+                                <input class="form-check-input" name="dif" type="radio">
+                                <label class="form-check-label">Mi 14:00 - 18:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wan" aria-expanded="false" aria-controls="wan">
+                                WAN Technology
+                            </button>
+                            </h2>
+                            <div id="wan" class="accordion-collapse collapse" data-bs-parent="#network">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 10:00, Ju 9:00 - 11:00</label>
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label me-2">Lu 17:00 - 18:59, Mi 19:00 - 21:59</label>
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label">Ju 14:00 - 17:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec" aria-expanded="false" aria-controls="sec">
+                                Security Fundamentals
+                            </button>
+                            </h2>
+                            <div id="sec" class="accordion-collapse collapse" data-bs-parent="#network">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 12:59</label>
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label">Mi 14:00 - 18:59</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-success float-end mt-3 mb-2">Print Selection</button>
+                </div>
+               </div>
+            </div>  -->
+
+           <!--  Multimedia selection -->
+
+            <!--  <div class="col-6 offset-3 mt-5 mb-5">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="card-title text-center fst-italic">Multimedia Subject Selection</h4>
+                    </div>
+                    <div class="card-body">
+                       <div class="accordion" id="multimedia">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tmm" aria-expanded="true" aria-controls="tmm">
+                                Advanced Visual communication
+                            </button>
+                            </h2>
+                            <div id="tmm" class="accordion-collapse collapse show" data-bs-parent="#multimedia">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label me-2">Ma 8:00 - 12:59</label>
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label me-2">Lu 17:00 - 21:59</label>
+                                <input class="form-check-input" name="ProgOne" type="radio">
+                                <label class="form-check-label">Vi 14:00 - 17:59</label>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#photo" aria-expanded="false" aria-controls="photo">
+                                Photography
+                            </button>
+                            </h2>
+                            <div id="photo" class="accordion-collapse collapse" data-bs-parent="#multimedia">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label me-2">Mi 17:00 - 21:59</label>
+                                <input class="form-check-input" name="ProgTwo" type="radio">
+                                <label class="form-check-label">Ju 14:00 - 17:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mark" aria-expanded="false" aria-controls="mark">
+                                Marketing
+                            </button>
+                            </h2>
+                            <div id="mark" class="accordion-collapse collapse" data-bs-parent="#multimedia">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="dif" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="dif" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 12:59</label>
+                                <input class="form-check-input" name="dif" type="radio">
+                                <label class="form-check-label">Mi 14:00 - 18:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#desk" aria-expanded="false" aria-controls="desk">
+                                Desktop Publishing Introduction
+                            </button>
+                            </h2>
+                            <div id="desk" class="accordion-collapse collapse" data-bs-parent="#multimedia">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 10:00, Ju 9:00 - 11:00</label>
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label me-2">Lu 17:00 - 18:59, Mi 19:00 - 21:59</label>
+                                <input class="form-check-input" name="dba" type="radio">
+                                <label class="form-check-label">Ju 14:00 - 17:59</label>
+                            </div>
+                        </div>
+                        </div>
+
+                         <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dig" aria-expanded="false" aria-controls="dig">
+                                Digital Illustration
+                            </button>
+                            </h2>
+                            <div id="dig" class="accordion-collapse collapse" data-bs-parent="#multimedia">
+                            <div class="accordion-body">
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label me-2">Lu 8:00 - 12:59</label>
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label me-2">Mi 8:00 - 12:59</label>
+                                <input class="form-check-input" name="mat" type="radio">
+                                <label class="form-check-label">Mi 14:00 - 18:59</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-success float-end mt-3 mb-2">Print Selection</button>
+                </div>
+            </div>  
+        </div>     -->
+
+        <!-- <div class="col-6 offset-3 mt-5 mb-4">
+            <div class="card">
+                <div class="card-header bg-black text-white text-center">
+                    <h2>Summary Selection</h2>
+                </div>
+                <div class="card-body">
+                    <h3 class="text-center fst-italic">Student Information</h3>
+                    <div class="mt-5">
+                        <p><span class="fw-bold">Name:</span> Elian Javier</p>
+                        <p><span class="fw-bold">Province:</span> Santo Domingo</p>
+                        <p><span class="fw-bold">City:</span> Santo Domingo</p>
+                        <p><span class="fw-bold">Sector:</span> Gazcue</p>
+                        <p><span class="fw-bold">Street:</span> Caonabo #27</p>
+                        <p><span class="fw-bold">Career:</span> Software Development</p>
+                    </div>
+
+                    <div class="mt-3">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Lu</th>
+                                    <th>Ma</th>
+                                    <th>Mi</th>
+                                    <th>Ju</th>
+                                    <th>Vi</th>
+                                    <th>Sa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Programming Fundamentals</td>
+                                    <td>lu 8:00 - 12:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Integral Calculus</td>
+                                    <td></td>
+                                    <td>Ma 8:00 - 12:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Computers Fundamentals</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="float-end">
+                        <button id="btn-finish" class="btn btn-outline-success">Finish</button>
+                        <button id="btn-selection" class="btn btn-outline-warning">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>  -->
+
+    </div>
+    
+    <script src="./assets/js/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/js/site/index.js"></script>
+</body>
+</html>
