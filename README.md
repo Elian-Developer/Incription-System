@@ -2,16 +2,14 @@
 
 ## *Tabla de contenido* 📄
 
-- [Descripcion general](https://github.com/Elian-Developer/Pokedex/tree/master#descripción-general)
-- [Demostraciones del proyecto](https://github.com/Elian-Developer/Pokedex/tree/master#demostraciones-del-proyecto)
-- [Construido con](https://github.com/Elian-Developer/Pokedex/tree/master#construido-con)
-- [Autor](https://github.com/Elian-Developer/Pokedex/tree/master#autor)
+- [Descripcion general](https://github.com/Elian-Developer/Incription-System/tree/master#descripción-general-)
+- [Demostraciones del proyecto](https://github.com/Elian-Developer/Incription-System/tree/master#demostraciones-del-proyecto-)
+- [Construido con](https://github.com/Elian-Developer/Incription-System/tree/master#construido-con-%EF%B8%8F)
+- [Autor](https://github.com/Elian-Developer/Incription-System/tree/master#autor-%EF%B8%8F)
 
 ## *Descripción General* 📋
 
-Este proyecto consiste en un ***System Inscription***, destinado a modelar el proceso para un sistema de Inscripcion - selección 
-de asignaturas de una Institucion educativa. El sistema cuenta con varios modulos, el de informacion personal, seleccion de asignaturas
-para la carrera seleccionada y luego imprimir su seleccion con sus datos.
+Este proyecto consiste en un ***System Inscription***, destinado a modelar el proceso para un sistema de Inscripción - selección de asignaturas de una Institución educativa. El sistema cuenta con varios módulos, el de información personal, selección de asignaturas para la carrera seleccionada y luego imprimir su selección con sus datos.
 
 Este proyecto fue elaborado con JavaScript utilizando la libreria de Jquery y Bootstrap para el manejo de los estilos.
  
